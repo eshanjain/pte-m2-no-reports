@@ -20,13 +20,13 @@ phases:
       - echo $CODEBUILD_CURRENT_SHARD
       - echo $CODEBUILD_BATCH_BUILD_ARN
       - echo "Running codebuild-tests-run command using CODEBUILD_CURRENT_SHARD_FILES"
-      - codebuild-tests-run --test-command 'npx jest --runInBand --coverage --testPathPattern=$(echo "$CODEBUILD_CURRENT_SHARD_FILES" | tr "\n" " ")' --files-search "codebuild-glob-search '**/_tests_/calculator/**/*.test.js'" --sharding-strategy 'equal-distribution'
+      - codebuild-tests-run --test-command 'npx jest --runInBand --coverage' --files-search "codebuild-glob-search '**/tests/*.test.js'"
          
   post_build:
     commands:
       - codebuild-glob-search '**/*.xml'  
       - echo "Running post-build steps..."
-      - echo "Build completed on `date`"
+      - echo "Build completed"
 
 
 reports:
