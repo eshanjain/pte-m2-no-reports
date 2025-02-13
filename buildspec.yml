@@ -20,7 +20,7 @@ phases:
       - echo $CODEBUILD_CURRENT_SHARD
       - echo $CODEBUILD_BATCH_BUILD_ARN
       - echo "Running codebuild-tests-run command using CODEBUILD_CURRENT_SHARD_FILES"
-      - codebuild-tests-run --test-command 'npx jest --runInBand --coverage' --files-search "codebuild-glob-search '**/tests/*.test.js'"
+      - codebuild-tests-run --test-command 'npx jest --runInBand --coverage' --files-search "codebuild-glob-search '**/_tests_/calculator/**/*.test.js'"
          
   post_build:
     commands:
