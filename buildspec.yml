@@ -29,17 +29,17 @@ phases:
       - echo "Build completed"
 
 
-# reports:
-#   failed-case-t:
-#     files:
-#       - "**/*"
-#     base-directory: 'test-reports'
-#     file-format: JunitXml
-#   failed-case-cc:
-#     files:
-#       - "**/*"
-#     base-directory: 'coverage'
-#     file-format: CLOVERXML
+reports:
+  failed-case-t:
+    files:
+      - "**/*"
+    base-directory: 'test-reports'
+    file-format: JunitXml
+  failed-case-cc:
+    files:
+      - "**/*"
+    base-directory: 'coverage'
+    file-format: CLOVERXML
 
 artifacts:
   files:
