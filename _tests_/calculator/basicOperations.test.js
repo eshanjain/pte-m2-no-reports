@@ -9,7 +9,7 @@ describe('Basic Calculator Operations', () => {
   });
 
   test('subtraction works correctly', () => {
-    expect(subtract(5, 3)).toBe(1);
+    expect(subtract(5, 3)).toBe(2);
     expect(subtract(1, 1)).toBe(0);
     expect(subtract(0, 5)).toBe(-5);
   });
